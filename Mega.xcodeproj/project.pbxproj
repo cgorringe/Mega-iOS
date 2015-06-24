@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C34931E6188E32DA007F5663 /* about_icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931E4188E32DA007F5663 /* about_icon76.png */; };
+		C34931E7188E32DA007F5663 /* about_icon76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931E5188E32DA007F5663 /* about_icon76@2x.png */; };
+		C34931F2188E3F7D007F5663 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931E8188E3F7D007F5663 /* Default-568h@2x.png */; };
+		C34931F3188E3F7D007F5663 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931E9188E3F7D007F5663 /* Default.png */; };
+		C34931F4188E3F7D007F5663 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931EA188E3F7D007F5663 /* Default@2x.png */; };
+		C34931F5188E3F7D007F5663 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931EB188E3F7D007F5663 /* Icon-72.png */; };
+		C34931F6188E3F7D007F5663 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931EC188E3F7D007F5663 /* Icon-72@2x.png */; };
+		C34931F7188E3F7D007F5663 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931ED188E3F7D007F5663 /* Icon-76.png */; };
+		C34931F8188E3F7D007F5663 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931EE188E3F7D007F5663 /* Icon-76@2x.png */; };
+		C34931F9188E3F7D007F5663 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931EF188E3F7D007F5663 /* Icon-120.png */; };
+		C34931FA188E3F7D007F5663 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931F0188E3F7D007F5663 /* Icon.png */; };
+		C34931FB188E3F7D007F5663 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34931F1188E3F7D007F5663 /* Icon@2x.png */; };
+		CE924C7A1530412A00F49018 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE924C791530412A00F49018 /* UIKit.framework */; };
+		CE924C7C1530412A00F49018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE924C7B1530412A00F49018 /* Foundation.framework */; };
+		CE924C7E1530412A00F49018 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE924C7D1530412A00F49018 /* CoreGraphics.framework */; };
+		CE924C841530412A00F49018 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE924C821530412A00F49018 /* InfoPlist.strings */; };
+		CE924C861530412A00F49018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE924C851530412A00F49018 /* main.m */; };
+		CE924C8A1530412A00F49018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE924C891530412A00F49018 /* AppDelegate.m */; };
+		CE924C8D1530412A00F49018 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE924C8B1530412A00F49018 /* MainStoryboard_iPhone.storyboard */; };
+		CE924C901530412A00F49018 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE924C8E1530412A00F49018 /* MainStoryboard_iPad.storyboard */; };
+		CE924C931530412A00F49018 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE924C921530412A00F49018 /* ViewController.m */; };
+		CE924CA6153041A900F49018 /* orangeBall.png in Resources */ = {isa = PBXBuildFile; fileRef = CE924C9E153041A900F49018 /* orangeBall.png */; };
+		CE924CA7153041A900F49018 /* orangeBall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE924C9F153041A900F49018 /* orangeBall@2x.png */; };
+		CE924CA8153041A900F49018 /* whiteBall.png in Resources */ = {isa = PBXBuildFile; fileRef = CE924CA0153041A900F49018 /* whiteBall.png */; };
+		CE924CA9153041A900F49018 /* whiteBall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE924CA1153041A900F49018 /* whiteBall@2x.png */; };
+		CE9601EA1534781C00E59353 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9601E91534781C00E59353 /* AboutViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C34931E4188E32DA007F5663 /* about_icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_icon76.png; sourceTree = "<group>"; };
+		C34931E5188E32DA007F5663 /* about_icon76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_icon76@2x.png"; sourceTree = "<group>"; };
+		C34931E8188E3F7D007F5663 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Mega/app/Default-568h@2x.png"; sourceTree = "<group>"; };
+		C34931E9188E3F7D007F5663 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Mega/app/Default.png; sourceTree = "<group>"; };
+		C34931EA188E3F7D007F5663 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Mega/app/Default@2x.png"; sourceTree = "<group>"; };
+		C34931EB188E3F7D007F5663 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Mega/app/Icon-72.png"; sourceTree = "<group>"; };
+		C34931EC188E3F7D007F5663 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Mega/app/Icon-72@2x.png"; sourceTree = "<group>"; };
+		C34931ED188E3F7D007F5663 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "Mega/app/Icon-76.png"; sourceTree = "<group>"; };
+		C34931EE188E3F7D007F5663 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Mega/app/Icon-76@2x.png"; sourceTree = "<group>"; };
+		C34931EF188E3F7D007F5663 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "Mega/app/Icon-120.png"; sourceTree = "<group>"; };
+		C34931F0188E3F7D007F5663 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Mega/app/Icon.png; sourceTree = "<group>"; };
+		C34931F1188E3F7D007F5663 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Mega/app/Icon@2x.png"; sourceTree = "<group>"; };
+		CE924C751530412A00F49018 /* Mega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mega.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE924C791530412A00F49018 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE924C7B1530412A00F49018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE924C7D1530412A00F49018 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE924C811530412A00F49018 /* Mega-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mega-Info.plist"; sourceTree = "<group>"; };
+		CE924C831530412A00F49018 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE924C851530412A00F49018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE924C871530412A00F49018 /* Mega-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mega-Prefix.pch"; sourceTree = "<group>"; };
+		CE924C881530412A00F49018 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE924C891530412A00F49018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE924C8C1530412A00F49018 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		CE924C8F1530412A00F49018 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		CE924C911530412A00F49018 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE924C921530412A00F49018 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE924C9E153041A900F49018 /* orangeBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeBall.png; sourceTree = "<group>"; };
+		CE924C9F153041A900F49018 /* orangeBall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeBall@2x.png"; sourceTree = "<group>"; };
+		CE924CA0153041A900F49018 /* whiteBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteBall.png; sourceTree = "<group>"; };
+		CE924CA1153041A900F49018 /* whiteBall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteBall@2x.png"; sourceTree = "<group>"; };
+		CE9601E81534781C00E59353 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		CE9601E91534781C00E59353 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE924C721530412900F49018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE924C7A1530412A00F49018 /* UIKit.framework in Frameworks */,
+				CE924C7C1530412A00F49018 /* Foundation.framework in Frameworks */,
+				CE924C7E1530412A00F49018 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C34931D5188E2694007F5663 /* AppGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				C34931E8188E3F7D007F5663 /* Default-568h@2x.png */,
+				C34931E9188E3F7D007F5663 /* Default.png */,
+				C34931EA188E3F7D007F5663 /* Default@2x.png */,
+				C34931F0188E3F7D007F5663 /* Icon.png */,
+				C34931F1188E3F7D007F5663 /* Icon@2x.png */,
+				C34931EB188E3F7D007F5663 /* Icon-72.png */,
+				C34931EC188E3F7D007F5663 /* Icon-72@2x.png */,
+				C34931ED188E3F7D007F5663 /* Icon-76.png */,
+				C34931EE188E3F7D007F5663 /* Icon-76@2x.png */,
+				C34931EF188E3F7D007F5663 /* Icon-120.png */,
+			);
+			name = AppGraphics;
+			sourceTree = "<group>";
+		};
+		C3FC26381B3A7F9900E8F9E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE924C8B1530412A00F49018 /* MainStoryboard_iPhone.storyboard */,
+				CE924C8E1530412A00F49018 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C3FC263A1B3A802400E8F9E3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE924C911530412A00F49018 /* ViewController.h */,
+				CE924C921530412A00F49018 /* ViewController.m */,
+				CE9601E81534781C00E59353 /* AboutViewController.h */,
+				CE9601E91534781C00E59353 /* AboutViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE924C6A1530412900F49018 = {
+			isa = PBXGroup;
+			children = (
+				C34931D5188E2694007F5663 /* AppGraphics */,
+				CE924C7F1530412A00F49018 /* Mega */,
+				CE924C99153041A900F49018 /* graphics */,
+				CE924C781530412A00F49018 /* Frameworks */,
+				CE924C761530412A00F49018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE924C761530412A00F49018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE924C751530412A00F49018 /* Mega.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE924C781530412A00F49018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE924C791530412A00F49018 /* UIKit.framework */,
+				CE924C7B1530412A00F49018 /* Foundation.framework */,
+				CE924C7D1530412A00F49018 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE924C7F1530412A00F49018 /* Mega */ = {
+			isa = PBXGroup;
+			children = (
+				CE924C801530412A00F49018 /* Supporting Files */,
+				C3FC26381B3A7F9900E8F9E3 /* Views */,
+				C3FC263A1B3A802400E8F9E3 /* ViewControllers */,
+			);
+			path = Mega;
+			sourceTree = "<group>";
+		};
+		CE924C801530412A00F49018 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE924C811530412A00F49018 /* Mega-Info.plist */,
+				CE924C821530412A00F49018 /* InfoPlist.strings */,
+				CE924C851530412A00F49018 /* main.m */,
+				CE924C871530412A00F49018 /* Mega-Prefix.pch */,
+				CE924C881530412A00F49018 /* AppDelegate.h */,
+				CE924C891530412A00F49018 /* AppDelegate.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE924C99153041A900F49018 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				C34931E4188E32DA007F5663 /* about_icon76.png */,
+				C34931E5188E32DA007F5663 /* about_icon76@2x.png */,
+				CE924C9E153041A900F49018 /* orangeBall.png */,
+				CE924C9F153041A900F49018 /* orangeBall@2x.png */,
+				CE924CA0153041A900F49018 /* whiteBall.png */,
+				CE924CA1153041A900F49018 /* whiteBall@2x.png */,
+			);
+			name = graphics;
+			path = Mega/graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE924C741530412900F49018 /* Mega */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE924C961530412A00F49018 /* Build configuration list for PBXNativeTarget "Mega" */;
+			buildPhases = (
+				CE924C711530412900F49018 /* Sources */,
+				CE924C721530412900F49018 /* Frameworks */,
+				CE924C731530412900F49018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mega;
+			productName = Mega;
+			productReference = CE924C751530412A00F49018 /* Mega.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE924C6C1530412900F49018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = CE924C6F1530412900F49018 /* Build configuration list for PBXProject "Mega" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE924C6A1530412900F49018;
+			productRefGroup = CE924C761530412A00F49018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE924C741530412900F49018 /* Mega */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE924C731530412900F49018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE924C841530412A00F49018 /* InfoPlist.strings in Resources */,
+				C34931FB188E3F7D007F5663 /* Icon@2x.png in Resources */,
+				C34931F7188E3F7D007F5663 /* Icon-76.png in Resources */,
+				CE924C8D1530412A00F49018 /* MainStoryboard_iPhone.storyboard in Resources */,
+				CE924C901530412A00F49018 /* MainStoryboard_iPad.storyboard in Resources */,
+				CE924CA6153041A900F49018 /* orangeBall.png in Resources */,
+				CE924CA7153041A900F49018 /* orangeBall@2x.png in Resources */,
+				C34931FA188E3F7D007F5663 /* Icon.png in Resources */,
+				C34931F5188E3F7D007F5663 /* Icon-72.png in Resources */,
+				C34931F3188E3F7D007F5663 /* Default.png in Resources */,
+				C34931F2188E3F7D007F5663 /* Default-568h@2x.png in Resources */,
+				C34931F8188E3F7D007F5663 /* Icon-76@2x.png in Resources */,
+				CE924CA8153041A900F49018 /* whiteBall.png in Resources */,
+				C34931E7188E32DA007F5663 /* about_icon76@2x.png in Resources */,
+				C34931F9188E3F7D007F5663 /* Icon-120.png in Resources */,
+				CE924CA9153041A900F49018 /* whiteBall@2x.png in Resources */,
+				C34931E6188E32DA007F5663 /* about_icon76.png in Resources */,
+				C34931F4188E3F7D007F5663 /* Default@2x.png in Resources */,
+				C34931F6188E3F7D007F5663 /* Icon-72@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE924C711530412900F49018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE924C861530412A00F49018 /* main.m in Sources */,
+				CE924C8A1530412A00F49018 /* AppDelegate.m in Sources */,
+				CE924C931530412A00F49018 /* ViewController.m in Sources */,
+				CE9601EA1534781C00E59353 /* AboutViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE924C821530412A00F49018 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE924C831530412A00F49018 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE924C8B1530412A00F49018 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE924C8C1530412A00F49018 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		CE924C8E1530412A00F49018 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE924C8F1530412A00F49018 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE924C941530412A00F49018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "ca1babd3-6082-44d0-ac53-fd2af5dc2fb5";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE924C951530412A00F49018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "ca1babd3-6082-44d0-ac53-fd2af5dc2fb5";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE924C971530412A00F49018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mega/Mega-Prefix.pch";
+				INFOPLIST_FILE = "Mega/Mega-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gorringe.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE924C981530412A00F49018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mega/Mega-Prefix.pch";
+				INFOPLIST_FILE = "Mega/Mega-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gorringe.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE924C6F1530412900F49018 /* Build configuration list for PBXProject "Mega" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE924C941530412A00F49018 /* Debug */,
+				CE924C951530412A00F49018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE924C961530412A00F49018 /* Build configuration list for PBXNativeTarget "Mega" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE924C971530412A00F49018 /* Debug */,
+				CE924C981530412A00F49018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE924C6C1530412900F49018 /* Project object */;
+}
