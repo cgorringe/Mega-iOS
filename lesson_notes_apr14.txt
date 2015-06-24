@@ -1,0 +1,268 @@
+4/14/2012
+Lesson Notes
+------------
+
+Concepts we'll cover in today's lesson:
+
+Finising Mega Millions App:
+- segue to an About view, then return
+- tap & pan gestures
+- using a timer
+- opening a URL in mobile Safari
+- relative placement of items in the iPad storyboard
+- interface rotation
+
+New app:
+- styling UITabBar and UINavigationControl
+- using an embedded web browser (UIWebView)
+- downloading and displaying an image from a given URL
+- resources for communicating with web API's
+
+--------------------------------------------------------------------------------
+Useful links:
+
+* Custom UI Controls for iOS
+  http://cocoacontrols.com/
+
+* Lot's of tutorials here for when you really want to get into this!
+  http://www.raywenderlich.com/tutorials
+
+--------------------------------------------------------------------------------
+Returning to the previous view after a segue:
+
+1. Create a new set of files for your new UIViewController.
+2. Create a new method, and link to it from a button:
+
+- (IBAction)goBack:(id)sender
+{
+  // This is the important line of code that returns us back to the previous view.
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+--------------------------------------------------------------------------------
+Gesture Recognizers:
+
+* Apple's official documentation:
+  http://developer.apple.com/library/ios/#documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizers/GestureRecognizers.html#//apple_ref/doc/uid/TP40009541-CH6-SW1
+
+-----
+How to create a double-tap gesture recognizer:  (no additional coding!)
+
+* In the storyboard, add a Tap Gesture Recognizer, then under "Sent Actions" 
+  on the right, point the selector to the view controller and select the
+  method that you want to be called. (e.g. pointRandomizeButton)
+  Then change it's taps attribute to "2" for double-tap.
+
+-----
+Pan Gestures are more complex and involve some coding:
+
+Place this in your .h file:
+  float firstX, firstY;
+
+// To add Pan Gestures, add a Pan Gesture Recognizer for every ball's view (6).
+// Point every "Sent Actions" selector to this method, which can be named
+// anything, doesn't have to be "handlePanGesture", as long as the rest stays 
+// the same.
+
+// In order to link a Pan Gesture to a ball's UIView in the Storyboard, go to 
+// the list of objects on the left, then drag the "Pan Gesture Recognizer" over 
+// to the View that contains the image and label.  This should add an item to
+// the gesture's "Referencing Outlet Collections" and to the view's 
+// "Outlet Collections".  Repeat this for every pan gesture, one for every
+// ball view.
+
+- (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender {
+ 
+  // retrieves the view of the ball that the user is panning
+  UIView *thisView = [sender view];
+
+  // the "translation" is the offset or relative or delta position from the point
+  // where the user began the panning, to the current position of their finger
+  CGPoint translate = [sender translationInView:self.view];
+
+  // brings the ball's view in front of all the other balls
+  [self.view bringSubviewToFront:thisView];
+  
+  if (sender.state == UIGestureRecognizerStateBegan) {
+    // this runs once, right at the start of the panning gesture
+    firstX = thisView.center.x;
+    firstY = thisView.center.y;
+  }
+  else if (sender.state == UIGestureRecognizerStateChanged) {
+    // this runs multiple times, during the panning gesture
+    thisView.center = CGPointMake(firstX + translate.x, firstY + translate.y);
+  }
+  else if (sender.state == UIGestureRecognizerStateEnded) {
+    // this runs once, at the end when the user lifts their finger
+    NSLog(@"pan gesture: x = %.1f  y = %.1f", translate.x, translate.y);  // TEST
+  }
+}
+
+--------------------------------------------------------------------------------
+Using a Timer:
+
+Place this in your .h file:
+  NSTimer *timer;
+
+To stop a timer:
+  if (timer) { [timer invalidate]; timer = nil; }
+
+Start a timer to randomize the ball labels repeatedly every 0.2 seconds:
+  timer = [NSTimer scheduledTimerWithTimeInterval:0.2 
+                                           target:self 
+                                         selector:@selector(randomizeBallLabels) 
+                                         userInfo:nil 
+                                          repeats:YES];
+
+  // animate the balls for 1.0 second
+  [UIView animateWithDuration:1.0 
+    animations:^{
+      [self randomizeBallPositions];
+    } 
+    completion:^(BOOL finished){
+      // stop the random number timer when animation completes
+      if (timer) { [timer invalidate]; timer = nil; }
+    }
+  ];
+
+
+--------------------------------------------------------------------------------
+Open a URL in Safari App:
+
+- (IBAction)openSafari:(id)sender
+{
+  NSURL *url = [NSURL URLWithString:@"http://example.com/"];
+  if (![[UIApplication sharedApplication] openURL:url]) {
+    NSLog(@"Failed to open %@", [url description]);
+  }
+}
+
+
+--------------------------------------------------------------------------------
+Styling UITabBar and UINavigationControl
+
+--- UINavigationBar ---
+
+* Changing the background image on a Navigation bar under the current navigation controller:
+
+  UINavigationBar *navBar = self.navigationController.navigationBar;
+  [navBar setBackgroundImage:[UIImage imageNamed:@"navbar.png"] forBarMetrics:UIBarMetricsDefault];
+
+* To change the appearance of ALL Navigation bars in the app:
+  [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar.png"] forBarMetrics:UIBarMetricsDefault];
+
+* UIBarMetricsDefault applies for iPhone portrait mode.  
+  For landscape, set using UIBarMetricsLandscapePhone.
+
+* After assigning navBar (above) you can also change it's color:
+  navBar.tintColor = [UIColor redColor];
+  navBar.translucent = YES;                   // or make translucent
+
+
+--- UITabBar ---
+
+* The UITabBar also has the backgroundImage property:
+  myTabBar.backgroundImage = [UIImage imageNamed:@"tabbar.png"];
+
+* To set the tint color to apply to the gradient image used when creating the selected image:
+  myTabBar.selectedImageTintColor = [UIColor greenColor];
+
+* The selection indicator image is drawn on top of the tab bar, behind the bar item icon.
+  myTabBar.selectionIndicatorImage = [UIImage imageNamed:@"tab.png"];
+
+Read the UITabBar Class Reference for more info!
+
+
+--------------------------------------------------------------------------------
+Using an embedded web browser (UIWebView)
+
+// Youtube video:
+url = @"http://m.youtube.com/watch?gl=US&hl=en&client=mv-google&v=wf_IIbT8HGk";
+
+
+// .h file
+@interface WebViewController : UIViewController <UIWebViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) NSString *url;
+
+
+// .m file
+
+// loading of web page
+[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+
+
+// *** extra stuff (might not need) ***
+
+#pragma mark - UIWebViewDelegate
+
+// Sent if a web view failed to load a frame.
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+  NSLog(@"Webview failed to load a frame");
+}
+
+// Sent before a web view begins loading a frame.
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request 
+        navigationType:(UIWebViewNavigationType)navigationType
+{
+  NSLog(@"Webview about to load: %@", request.URL.absoluteString);
+  return YES;
+}
+
+// Sent after a web view starts loading a frame.
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+  NSLog(@"webViewDidStartLoad");
+}
+
+// Sent after a web view finishes loading a frame.
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+  NSLog(@"webViewDidFinishLoad");
+}
+
+
+--------------------------------------------------------------------------------
+Downloading and displaying an image from a given URL
+
+* using UIImage & NSData
+
+NSString *url = "";  // fill in an image URL here
+UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+
+
+--------------------------------------------------------------------------------
+Resources for communicating with web API's
+
+
+The JSON format is used by most web API's these days.
+
+* JSON Spec
+  http://www.json.org/
+
+* Working with JSON in iOS 5 Tutorial
+  http://www.raywenderlich.com/5492/working-with-json-in-ios-5
+
+To find out what services offer, check out their "developer" pages.
+
+For example, Facebook has:
+  http://developers.facebook.com/
+Their iOS Tutorial:
+  https://developers.facebook.com/docs/mobile/ios/build/
+
+
+** Here's something much simpler! **
+
+To obtain a Facebook profile thumbnail image (50x50px square JPEG):
+  http://graph.facebook.com/FACEBOOK_ID/picture?type=square
+  (Try setting type to: small, normal, large, square)
+
+For example:
+  http://graph.facebook.com/carl8/picture?type=normal
+I
+
+
+--------------------------------------------------------------------------------
+-EOF-

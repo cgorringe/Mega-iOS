@@ -1,0 +1,141 @@
+4/6/2012
+Lesson Notes
+------------
+
+In this lesson, we will go through the process of creating our own
+Mega Millions Lotto random number generator app.
+
+Concepts we'll cover:
+- Generating random numbers
+- Loading images into UIViews
+- Animating UIViews
+- UIButton control
+- Adding icons and loading screen images to app
+- Creating a (flip) app
+- adding labels to the about view using the interface builder
+- adding a button that hits a URL  (maybe)
+
+
+Later I'd like to also cover: (next week)
+- styling UINavigationControls and UITabBars
+
+--------------------------------------------------------------------------------
+Mega Millions Lottery
+
+* pick 5 numbers from 1-56
+* one MEGA number from 1-46
+
+Example website random number generator:
+http://www.megamillions.com/howto/random.asp
+
+Mega ball size:
+320px / 5 =
+ 64px  (standard size)
+ 128px (@2x)
+
+--------------------------------------------------------------------------------
+
+iPhone & iPad Dimensions
+http://titaniumtips.com/files/tag-dimensions.php
+
+** Highly Recommended Reading: **
+
+iOS Human Interface Guidelines
+
+Custom Icon and Image Creation Guidelines
+http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/mobilehig/IconsImages/IconsImages.html
+
+Icon sizes + filenames
+http://kgutteridge.co.uk/blog/2010/07/04/icon-sizes-filenames-for-ios-devices/
+http://www.weston-fl.com/blog/?p=840/
+
+--------------------------------------------------------------------------------
+Portrait View
+
+Standard iPhone size:   320x480
+with status bar (20px): 320x460
+Retina iPhone size:     640x960
+with status bar (40px): 640x920
+
+Standard iPad size:     768x1024
+with status bar (20px): 768x1004
+Retina iPad size:       1536x2048
+with status bar (40px): 1536x2008
+
+Landscape View
+
+Standard iPad size:     1024x768
+with status bar (20px): 1024x748
+Retina iPad size:       2048x1536
+with status bar (40px): 2048x1496
+
+Launch Images (required)
+
+Standard iPhone size:   320x480  (Default.png)
+Retina iPhone size:     640x960  (Default@2x.png)
+
+Application Icons (required)
+
+Standard iPhone:  57x57  (Icon.png)
+Retina iPhone:   114x114 (Icon@2x.png)
+Standard iPad:    72x72  (Icon-72.png)
+Retina iPad:     144x144 (Icon-72@2x.png)
+
+--------------------------------------------------------------------------------
+Random number generation:
+
+int randomNumber = arc4random() % 16;  // 0 to 15
+
+--------------------------------------------------------------------------------
+Animations:
+
+http://developer.apple.com/library/ios/#documentation/windowsviews/conceptual/viewpg_iphoneos/animatingviews/animatingviews.html
+
+--------------------------------------------------------------------------------
+
+// This will generate random lotto numbers for the ball labels.
+// There are 5 white balls with values 1-56.
+// One Mega ball with value 1-46.
+
+- (void)randomizeBallLabels
+{
+  int pos, pick, mega;
+  int balls[56];  // array of 56 balls [0-55]
+
+  // initialize the array of balls
+  for (int i=0; i < 56; i++) {
+    balls[i] = i + 1;
+  }
+
+  // choosing 5 random balls
+  for (int i=0; i < 5; i++) {
+
+    // select a random position within the array of balls
+    pos = i + (arc4random() % (56 - i));  // a number from i to 55
+    
+    // swap the value in that position with one in the start of the array
+    pick = balls[pos];
+    balls[pos] = balls[i];
+    balls[i] = pick;
+  }
+  // now the 5 random balls are in balls[0] thru balls[4]
+
+  // finally, we set the mega ball
+  mega = (arc4random() % 46) + 1;  // random number from 1 to 46
+
+  // assign values to the ball labels
+  self.ball1Label.text = [NSString stringWithFormat:@"%i", balls[0]];
+  self.ball2Label.text = [NSString stringWithFormat:@"%i", balls[1]];
+  self.ball3Label.text = [NSString stringWithFormat:@"%i", balls[2]];
+  self.ball4Label.text = [NSString stringWithFormat:@"%i", balls[3]];
+  self.ball5Label.text = [NSString stringWithFormat:@"%i", balls[4]];
+  self.megaLabel.text  = [NSString stringWithFormat:@"%i", mega];
+  
+  // refresh view
+  [self.view setNeedsDisplay];
+}
+
+
+
+
+-EOF-
