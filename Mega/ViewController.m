@@ -13,8 +13,8 @@
 
 @implementation ViewController
 
-@synthesize ball1View, ball2View, ball3View, ball4View, ball5View, megaView;
-@synthesize ball1Label, ball2Label, ball3Label, ball4Label, ball5Label, megaLabel;
+@synthesize ballViews, megaView;
+@synthesize ballLabels, megaLabel;
 
 // There are 5 white balls with values 1 to WHITE_BALL_MAX
 // #define WHITE_BALL_MAX 56   /* pre-Oct, 2013  */
@@ -130,7 +130,7 @@
   }
 
   // choose 5 random balls without picking the same ball twice
-  for (int i=0; i < 5; i++) {
+  for (int i=0; i < [self.ballLabels count]; i++) {
 
     // This is an interesting read on the problem of using the rand() function:
     // http://eternallyconfuzzled.com/arts/jsw_art_rand.aspx
@@ -144,18 +144,15 @@
     pick = balls[pos];
     balls[pos] = balls[i];
     balls[i] = pick;
+    
+    // assign ball number to the white ball label
+    UILabel *ballLabel = [self.ballLabels objectAtIndex:i];
+    ballLabel.text = [NSString stringWithFormat:@"%i", balls[i]];
   }
   // now the 5 random balls are in balls[0] thru balls[4]
 
   // finally, we set the mega ball
   mega = arc4random_uniform(MEGA_BALL_MAX) + 1;
-
-  // assign values to the ball labels
-  self.ball1Label.text = [NSString stringWithFormat:@"%i", balls[0]];
-  self.ball2Label.text = [NSString stringWithFormat:@"%i", balls[1]];
-  self.ball3Label.text = [NSString stringWithFormat:@"%i", balls[2]];
-  self.ball4Label.text = [NSString stringWithFormat:@"%i", balls[3]];
-  self.ball5Label.text = [NSString stringWithFormat:@"%i", balls[4]];
   self.megaLabel.text  = [NSString stringWithFormat:@"%i", mega];
   
   // refresh the view
@@ -166,16 +163,14 @@
 // Change the position of the balls
 - (void)randomizeBallPositions
 {
-  int xmin = self.ball1View.frame.size.width / 2;
-  int ymin = self.ball1View.frame.size.height / 2;
-  int xmax = self.view.bounds.size.width - self.ball1View.frame.size.width;
-  int ymax = self.view.bounds.size.height - self.ball1View.frame.size.height - 100;
+  int xmin = self.megaView.frame.size.width / 2;
+  int ymin = self.megaView.frame.size.height / 2;
+  int xmax = self.view.bounds.size.width - self.megaView.frame.size.width;
+  int ymax = self.view.bounds.size.height - self.megaView.frame.size.height - 100;
 
-  self.ball1View.center = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
-  self.ball2View.center = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
-  self.ball3View.center = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
-  self.ball4View.center = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
-  self.ball5View.center = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
+  for (UIView *ballView in self.ballViews) {
+    ballView.center = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
+  }
   self.megaView.center  = CGPointMake(arc4random_uniform(xmax) + xmin, arc4random_uniform(ymax) + ymin);
 }
 

@@ -18,21 +18,12 @@
 
 
 // ball views
-@property (nonatomic, weak) IBOutlet UIView *ball1View;
-@property (nonatomic, weak) IBOutlet UIView *ball2View;
-@property (nonatomic, weak) IBOutlet UIView *ball3View;
-@property (nonatomic, weak) IBOutlet UIView *ball4View;
-@property (nonatomic, weak) IBOutlet UIView *ball5View;
-@property (nonatomic, weak) IBOutlet UIView *megaView;
+@property (nonatomic, strong) IBOutletCollection(UIView) NSArray *ballViews;
+@property (nonatomic, weak)   IBOutlet UIView *megaView;
 
 // ball labels
-@property (nonatomic, weak) IBOutlet UILabel *ball1Label;
-@property (nonatomic, weak) IBOutlet UILabel *ball2Label;
-@property (nonatomic, weak) IBOutlet UILabel *ball3Label;
-@property (nonatomic, weak) IBOutlet UILabel *ball4Label;
-@property (nonatomic, weak) IBOutlet UILabel *ball5Label;
-@property (nonatomic, weak) IBOutlet UILabel *megaLabel;
-
+@property (nonatomic, strong) IBOutletCollection(UILabel) NSArray *ballLabels;
+@property (nonatomic, weak)   IBOutlet UILabel *megaLabel;
 
 // methods
 - (IBAction)tapToRandomize:(id)sender;

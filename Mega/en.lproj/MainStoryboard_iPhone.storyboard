@@ -182,18 +182,18 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="ball1Label" destination="9vf-uJ-6nT" id="m0m-lA-pBz"/>
-                        <outlet property="ball1View" destination="jua-Xd-yn8" id="8eh-7Z-jnc"/>
-                        <outlet property="ball2Label" destination="NB4-1a-sHn" id="6wt-mr-fJU"/>
-                        <outlet property="ball2View" destination="g2F-BU-eYH" id="0J0-8A-9rp"/>
-                        <outlet property="ball3Label" destination="hgw-Qn-4pa" id="HUg-1Q-H5c"/>
-                        <outlet property="ball3View" destination="M2L-kb-Fqx" id="Vn5-rW-p2h"/>
-                        <outlet property="ball4Label" destination="W4F-QL-ccW" id="YWQ-y6-Ds6"/>
-                        <outlet property="ball4View" destination="kTx-aX-11m" id="ldp-lA-pbz"/>
-                        <outlet property="ball5Label" destination="dYy-HV-ZUl" id="ly5-F9-Iw8"/>
-                        <outlet property="ball5View" destination="GuK-mZ-rb1" id="A6C-pM-lYv"/>
                         <outlet property="megaLabel" destination="g9B-9S-DYE" id="OdB-1J-o9y"/>
-                        <outlet property="megaView" destination="oTU-1K-lHy" id="dea-2p-oVF"/>
+                        <outlet property="megaView" destination="oTU-1K-lHy" id="cqq-6n-Ow0"/>
+                        <outletCollection property="ballViews" destination="jua-Xd-yn8" id="DFZ-gq-YLg"/>
+                        <outletCollection property="ballViews" destination="g2F-BU-eYH" id="sO1-mm-9yd"/>
+                        <outletCollection property="ballViews" destination="M2L-kb-Fqx" id="iF3-yg-d2Z"/>
+                        <outletCollection property="ballViews" destination="kTx-aX-11m" id="u33-85-W7S"/>
+                        <outletCollection property="ballViews" destination="GuK-mZ-rb1" id="F73-Yd-42p"/>
+                        <outletCollection property="ballLabels" destination="9vf-uJ-6nT" id="Gve-R5-OiS"/>
+                        <outletCollection property="ballLabels" destination="NB4-1a-sHn" id="6Le-6D-Aat"/>
+                        <outletCollection property="ballLabels" destination="hgw-Qn-4pa" id="TOx-kA-XSq"/>
+                        <outletCollection property="ballLabels" destination="W4F-QL-ccW" id="Kdj-PQ-WyC"/>
+                        <outletCollection property="ballLabels" destination="dYy-HV-ZUl" id="xCo-0V-9vs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -258,7 +258,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by Carl Gorringe" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="wCE-Lv-otR">
                                 <rect key="frame" x="70" y="394" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <color key="textColor" red="0.57179051637649536" green="0.52170777320861816" blue="0.99765282869338989" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="hx3-DH-TBi">
                                 <rect key="frame" x="140" y="511" width="112" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <state key="normal" title="More Apps">
                                     <color key="titleColor" red="0.79581570625305176" green="0.65700614452362061" blue="0.99924004077911377" alpha="1" colorSpace="calibratedRGB"/>

@@ -183,18 +183,18 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="ball1Label" destination="0q0-gr-zd7" id="Jie-cW-KhK"/>
-                        <outlet property="ball1View" destination="HCD-4a-5Xp" id="j6n-fG-Tuw"/>
-                        <outlet property="ball2Label" destination="Vr0-43-oCP" id="czw-Zy-zPY"/>
-                        <outlet property="ball2View" destination="vaP-80-8ns" id="wLQ-eV-xqD"/>
-                        <outlet property="ball3Label" destination="4cv-XO-1uR" id="ddN-vC-sVn"/>
-                        <outlet property="ball3View" destination="Zo3-uo-qlv" id="ybC-P4-Sze"/>
-                        <outlet property="ball4Label" destination="GbC-px-EZg" id="fOw-HM-a9Q"/>
-                        <outlet property="ball4View" destination="hg3-go-Nhj" id="Jjk-oO-fmk"/>
-                        <outlet property="ball5Label" destination="eAQ-M9-9PB" id="KF3-kO-KwS"/>
-                        <outlet property="ball5View" destination="5ML-Ja-8AO" id="IKt-Jg-zrk"/>
                         <outlet property="megaLabel" destination="Mbs-LO-phX" id="fbC-l5-RHI"/>
-                        <outlet property="megaView" destination="CXf-dm-BCF" id="Gey-cc-A3h"/>
+                        <outlet property="megaView" destination="CXf-dm-BCF" id="Fgo-qu-EdA"/>
+                        <outletCollection property="ballViews" destination="HCD-4a-5Xp" id="sEA-Ii-jaZ"/>
+                        <outletCollection property="ballViews" destination="vaP-80-8ns" id="8TQ-q6-54S"/>
+                        <outletCollection property="ballViews" destination="Zo3-uo-qlv" id="hi0-gC-gTZ"/>
+                        <outletCollection property="ballViews" destination="hg3-go-Nhj" id="n2S-QH-FV7"/>
+                        <outletCollection property="ballViews" destination="5ML-Ja-8AO" id="mb9-vO-dU3"/>
+                        <outletCollection property="ballLabels" destination="0q0-gr-zd7" id="AE4-V4-qXt"/>
+                        <outletCollection property="ballLabels" destination="Vr0-43-oCP" id="Tb7-4i-5tS"/>
+                        <outletCollection property="ballLabels" destination="4cv-XO-1uR" id="cww-nc-pC3"/>
+                        <outletCollection property="ballLabels" destination="GbC-px-EZg" id="6gg-kD-85e"/>
+                        <outletCollection property="ballLabels" destination="eAQ-M9-9PB" id="xG3-zN-pod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
